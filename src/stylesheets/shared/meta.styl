@@ -9,6 +9,12 @@
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+
+    &.multiline {
+      overflow: initial;
+      white-space: initial;
+      flex-basis: 100%;
+    }
   }
 
   .value {

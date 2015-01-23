@@ -54,6 +54,9 @@ article.story
           .term(ng-if="::story.current.episodeDate")
             | For Broadcast:
             .value {{ ::story.current.episodeDate | date : 'mediumDate'}}
+          .term.multiline
+            | Photo:
+            .value {{ ::story.image.caption }} ({{ ::story.image.credit }})
         ul.tags(ng-show="::story.current.tags.length > 0")
           li(ng-repeat="tag in ::story.current.tags", ng-bind="tag")
       section.licensing(ng-show="story.license")
